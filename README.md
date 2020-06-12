@@ -279,7 +279,7 @@ Implement the cost function and gradient for regularized logistic regression.
 
 ![RegularizedcostFunction](Figure/regularcostFunction.png)
 
-In Octave/MALLAB, recall that indexing starts from 1, hence, we should not be regularizing the theta(1) parameter (which corresponds to $0_0$) in the code. The gradient of the cost function is a vector where the jth element is defined as follows:
+In Octave/MALLAB, recall that indexing starts from 1, hence, we should not be regularizing the theta(1) parameter (which corresponds to *0_0*) in the code. The gradient of the cost function is a vector where the jth element is defined as follows:
 
 ![Gradient](Figure/regulargradient.png)
 
