@@ -131,6 +131,8 @@ end
 ### Learning parameters using fminuc
 Octave/MATLAB’s fminunc is an optimization solver that finds the minimum of an unconstrained function. For logistic regression, you want to optimize the cost function J(θ) with parameters θ.
 
+NOTE:: Install MATLAB - Optimization Toolbox
+
 We are going to use fminunc to find the best parameters θ for the logistic regression cost function, given a fixed dataset (of X and y values).
 
 We will pass to fminunc the following inputs:
@@ -150,12 +152,13 @@ options = optimset('GradObj', 'on', 'MaxIter', 400);
 	fminunc(@(t)(costFunction(t, X, y)), initial_theta, options);
 ```
 
-### Evaluating logistic regression
-
-We can use the model to predict whether a particular student will be admitted. For a student with an Exam 1 score of 45 and an Exam 2 score of 85, we should expect to see an admission probability of $result?????$.
-
 ![decisionboundry](Figure/decision.jpg)
 - Figure: Training data with decision boundry
+
+
+### Evaluating logistic regression
+
+We can use the model to predict whether a particular student will be admitted. For a student with an Exam 1 score of 45 and an Exam 2 score of 85, we should expect to see an admission probability of *0.776*.
 
 ### predict.m - Logistic Regression Prediction Function
 
