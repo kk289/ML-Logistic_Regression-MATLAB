@@ -84,8 +84,15 @@ Implement following function in sigmoid.m.
 For large positive values of x, the sigmoid should be close to 1, while for large negative values, the sigmoid should be close to 0.
 
 ```
-#code
+function g = sigmoid(z)
 
+g = zeros(size(z));
+
+# Compute the sigmoid of each value of z (z can be a matrix, vector or scalar).
+
+g = 1 ./ (1 + exp(-z))
+
+end
 ```
 
 ### costFunction.m - Logistic Regression Cost Function
