@@ -109,8 +109,23 @@ Implement the cost function and gradient for logistic regression.
 The code in costFunction.m to return the cost and gradient.
 
 ```
-# code
+function [J, grad] = costFunction(theta, X, y)
 
+% Initialize some useful values
+m = length(y); % number of training examples
+
+% Compute the cost of a particular choice of theta.
+%               You should set J to the cost.
+%               Compute the partial derivatives and set grad to the partial
+%               derivatives of the cost w.r.t. each parameter in theta
+%
+% Note: grad should have the same dimensions as theta
+
+h = sigmoid(X * theta);
+J = (1/m) .* sum(-y .* log(h)-(1-y) .* log(1-h));
+grad = 1/m .* X .* (h - y);
+
+end
 ```
 
 ### Learning parameters using fminuc
