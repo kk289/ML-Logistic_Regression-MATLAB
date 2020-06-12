@@ -372,5 +372,5 @@ With a larger λ, we should see a plot that shows an simpler decision boundary w
 
 1) Machine Learning by Stanford University on [Coursera](https://www.coursera.org/learn/machine-learning)
 
-2) [Linear Regression](https://www.coursera.org/learn/machine-learning/programming/8f3qT/linear-regression) 
+2) [Logistic Regression](https://www.coursera.org/learn/machine-learning/home/week/3)
 (Please notice that you need to log in to see the programming assignment.)
