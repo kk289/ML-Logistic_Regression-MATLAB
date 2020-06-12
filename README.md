@@ -187,14 +187,9 @@ ex2_reg.m
 ```
 
 ### Part 2.1: Visualizing the data
-### plotData.m : Function to plot classifier’s decision boundary
+### plotDecisionBoundary.m - Function to plot classifier’s decision boundary
 
-```
-#code
-
-```
-
-plotData.m is used to generate a figure where the axes are the two exam scores, and the positive (y = 1, accepted) and negative (y = 0, rejected) examples are shown with different markers.
+plotDecisionBoundary.m is used to generate a figure where the axes are the two exam scores, and the positive (y = 1, accepted) and negative (y = 0, rejected) examples are shown with different markers.
 
 ![plot](Figure/datavisualize2.jpg)
 - Figure: Scatterplot of training data
