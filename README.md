@@ -157,12 +157,23 @@ options = optimset('GradObj', 'on', 'MaxIter', 400);
 
 
 ### Evaluating logistic regression
+### predict.m - Logistic Regression Prediction Function
 
 We can use the model to predict whether a particular student will be admitted. For a student with an Exam 1 score of 45 and an Exam 2 score of 85, we should expect to see an admission probability of *0.776*.
 
-### predict.m - Logistic Regression Prediction Function
+```
+function p = predict(theta, X)
 
+% Instructions: Complete the following code to make predictions using
+%               your learned logistic regression parameters. 
+%               You should set p to a vector of 0's and 1's
+%
 
+h = sigmoid(X * theta);
+p = round(h);
+
+end
+```
 
 ## Part 2: Regularized Logistic Regression
 
