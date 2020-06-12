@@ -59,7 +59,8 @@ plotData.m is used to generate a figure where the axes are the two exam scores, 
 
 ### Part 1.2: Implementation 
 
-The Logistic Regression Hypothesis: 
+The Logistic Regression Hypothesis:
+
 ![sigmoid](Figure/Sigmond.png)
 
 ### sigmoid.m - Sigmoid Function
@@ -75,9 +76,11 @@ For large positive values of x, the sigmoid should be close to 1, while for larg
 Implement the cost function and gradient for logistic regression.
 
 - Cost Function in logistic regression:
+
 ![costFunction](Figure/costFunction.png)
 
 - Gradient of the cost
+
 ![Gradient](Figure/gradient.png)
 
 The code in costFunction.m to return the cost and gradient.
@@ -159,11 +162,13 @@ In the next parts, we will implement regularized logistic regression to fit the 
 Implement the cost function and gradient for regularized logistic regression.
 
 - Regularized Cost Function in logistic regression:
+
 ![RegularizedcostFunction](Figure/regularcostFunction.png)
 
 In Octave/MALLAB, recall that indexing starts from 1, hence, we should not be regularizing the theta(1) parameter (which corresponds to $0_0$) in the code. The gradient of the cost function is a vector where the jth element is defined as follows:
 
 ![Gradient](Figure/regulargradient.png)
+
 ![Gradient](Figure/regulargradient2.png)
 
 The code in costFunction.m to return the cost and gradient.
