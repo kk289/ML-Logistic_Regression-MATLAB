@@ -151,10 +151,14 @@ options = optimset('GradObj', 'on', 'MaxIter', 400);
 ```
 
 ### Evaluating logistic regression
+
 We can use the model to predict whether a particular student will be admitted. For a student with an Exam 1 score of 45 and an Exam 2 score of 85, we should expect to see an admission probability of $result?????$.
 
 ![decisionboundry](Figure/decision.jpg)
 - Figure: Training data with decision boundry
+
+### predict.m - Logistic Regression Prediction Function
+
 
 
 ## Part 2: Regularized Logistic Regression
