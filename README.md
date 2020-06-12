@@ -196,6 +196,55 @@ plotDecisionBoundary.m is used to generate a figure where the axes are the two e
 
 Figure shows that our dataset cannot be separated into positive and negative examples by a straight-line through the plot. Therefore, a straight-forward application of logistic regression will not perform well on this dataset since logistic regression will only be able to find a linear decision boundary.
 
+```
+function plotDecisionBoundary(theta, X, y)
+
+%   PLOTDECISIONBOUNDARY(theta, X,y) plots the data points with + for the 
+%   positive examples and o for the negative examples. X is assumed to be 
+%   a either 
+%   1) Mx3 matrix, where the first column is an all-ones column for the 
+%      intercept.
+%   2) MxN, N>3 matrix, where the first column is all-ones
+
+% Plot Data
+plotData(X(:,2:3), y);
+hold on
+
+if size(X, 2) <= 3
+    % Only need 2 points to define a line, so choose two endpoints
+    plot_x = [min(X(:,2))-2,  max(X(:,2))+2];
+
+    % Calculate the decision boundary line
+    plot_y = (-1./theta(3)).*(theta(2).*plot_x + theta(1));
+
+    % Plot, and adjust axes for better viewing
+    plot(plot_x, plot_y)
+    
+    % Legend, specific for the exercise
+    legend('Admitted', 'Not admitted', 'Decision Boundary')
+    axis([30, 100, 30, 100])
+else
+    % Here is the grid range
+    u = linspace(-1, 1.5, 50);
+    v = linspace(-1, 1.5, 50);
+
+    z = zeros(length(u), length(v));
+    % Evaluate z = theta*x over the grid
+    for i = 1:length(u)
+        for j = 1:length(v)
+            z(i,j) = mapFeature(u(i), v(j))*theta;
+        end
+    end
+    z = z'; % important to transpose z before calling contour
+
+    % Plot z = 0
+    % Notice you need to specify the range [0, 0]
+    contour(u, v, z, [0, 0], 'LineWidth', 2)
+end
+hold off
+end
+```
+
 ### Part 2.2: Feature mapping
 ### mapFeature.m - Function to generate polynomial features 
 One way to fit the data better is to create more features from each data point.
@@ -205,6 +254,20 @@ In the provided function mapFeature.m, we will map the features into all polynom
 
 As a result of this mapping, our vector of two features (the scores on two QA tests) has been transformed into a 28-dimensional vector. A logistic regression classifier trained on this higher-dimension feature vector will have a more complex decision boundary and will appear nonlinear when drawn in our 2-dimensional plot.
 While the feature mapping allows us to build a more expressive classifier, it also more susceptible to overfitting.
+
+```
+function out = mapFeature(X1, X2)
+
+degree = 6;
+out = ones(size(X1(:,1)));
+for i = 1:degree
+    for j = 0:i
+        out(:, end+1) = (X1.^(i-j)).*(X2.^j);
+    end
+end
+end
+```
+
 In the next parts, we will implement regularized logistic regression to fit the data and also see how regularization can help combat the overfitting problem.
 
 ### Part 2.3: Cost Function and gradient
@@ -225,7 +288,9 @@ In Octave/MALLAB, recall that indexing starts from 1, hence, we should not be re
 The code in costFunction.m to return the cost and gradient.
 
 ```
-# code
+
+
+
 
 ```
 
