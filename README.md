@@ -128,7 +128,7 @@ grad = 1/m * X' * (h - y);
 end
 ```
 
-### Learning parameters using fminuc
+### Learning parameters using *fminuc*
 Octave/MATLAB’s fminunc is an optimization solver that finds the minimum of an unconstrained function. For logistic regression, you want to optimize the cost function J(θ) with parameters θ.
 
 NOTE:: Install MATLAB - Optimization Toolbox
