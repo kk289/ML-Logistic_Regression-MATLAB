@@ -354,11 +354,13 @@ With a larger λ, we should see a plot that shows an simpler decision boundary w
 
 ## Result
 
-### Logistic Regression:  
+### Logistic Regression: Train Accuracy: 89.0
+
 ![decisionboundry](Figure/decision.jpg)
 - Figure: Training data with decision boundry
 
-### Regularized Logistic Regression:  
+### Regularized Logistic Regression: Train Accuracy (with lambda = 1): 83.1
+
 ![decisionboundry](Figure/decision1.jpg)
 - Figure: Training data with decision boundary (λ = 1)
 
