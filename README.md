@@ -335,23 +335,6 @@ In plotDecisionBoundary.m, we plot the non-linear decision boundary by computing
 - Figure: Training data with decision boundary (λ = 1)
 
 
-### Part 2.5: Optimizing different regularization parameters
-In this part, we will get to try out different regularization parameters for the dataset to understand how regularization prevents over-fitting.
-
-Notice the changes in the decision boundary as you vary λ. With a small λ, we should find that the classifier gets almost every training example correct, but draws a very complicated boundary, thus overfitting the data.
-
-![decisionboundry](Figure/decision2.jpg)
-- Figure: No regularization (Overfitting) (λ = 0)
-
-This is not a good decision boundary: for example, it predicts that a point at x = (−0.25, 1.5) is accepted (y = 1), which seems to be an incorrect decision given the training set.
-
-With a larger λ, we should see a plot that shows an simpler decision boundary which still separates the positives and negatives fairly well. However, if λ is set to too high a value, we will not get a good fit and the decision boundary will not follow the data so well, thus underfitting the data.
-
-![decisionboundry](Figure/decision3.jpg)
-- Figure: Too much regularization (Underfitting) (λ = 100)
-
-
-
 ## Result
 
 ### Logistic Regression: Train Accuracy: 89.0
@@ -363,6 +346,26 @@ With a larger λ, we should see a plot that shows an simpler decision boundary w
 
 ![decisionboundry](Figure/decision1.jpg)
 - Figure: Training data with decision boundary (λ = 1)
+
+### OPTIONAL
+### Part 2.5: Optimizing different regularization parameters
+In this part, we will get to try out different regularization parameters for the dataset to understand how regularization prevents over-fitting.
+
+Notice the changes in the decision boundary as you vary λ. With a small λ, we should find that the classifier gets almost every training example correct, but draws a very complicated boundary, thus overfitting the data.
+
+### Regularized Logistic Regression: Train Accuracy (with lambda = 0): 88.98
+
+![decisionboundry](Figure/decision2.jpg)
+- Figure: No regularization (Overfitting) (λ = 0)
+
+This is not a good decision boundary: for example, it predicts that a point at x = (−0.25, 1.5) is accepted (y = 1), which seems to be an incorrect decision given the training set.
+
+With a larger λ, we should see a plot that shows an simpler decision boundary which still separates the positives and negatives fairly well. However, if λ is set to too high a value, we will not get a good fit and the decision boundary will not follow the data so well, thus underfitting the data.
+
+### Regularized Logistic Regression: Train Accuracy (with lambda = 100): 61.02
+
+![decisionboundry](Figure/decision3.jpg)
+- Figure: Too much regularization (Underfitting) (λ = 100)
 
 
 ## Course Links
