@@ -47,8 +47,24 @@ ex2.m
 ### plotData.m : Function to plot classifier’s decision boundary
 
 ```
-#code
+function plotData(X, y)
 
+% Create New Figure
+figure; hold on;
+
+% Plot the positive and negative examples on a 2D plot, using the option 'k+' for the positive 
+% examples and 'ko' for the negative examples.
+
+% Find Indices of Positive and Negative Examples
+pos = find(y == 1);
+neg = find(y == 0);
+
+% Plot Examples
+plot(X(pos, 1), X(pos, 2), 'k+', 'LineWidth', 2,'MarkerSize', 7);
+plot(X(neg, 1), X(neg, 2), 'ko', 'MarkerFaceColor', 'y','MarkerSize', 7);
+
+hold off;
+end
 ```
 
 plotData.m is used to generate a figure where the axes are the two exam scores, and the positive and negative examples are shown with different markers.
