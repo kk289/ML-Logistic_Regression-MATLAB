@@ -350,6 +350,19 @@ With a larger λ, we should see a plot that shows an simpler decision boundary w
 ![decisionboundry](Figure/decision3.jpg)
 - Figure: Too much regularization (Underfitting) (λ = 100)
 
+
+
+## Result
+
+Logistic Regression:  
+![decisionboundry](Figure/decision.jpg)
+- Figure: Training data with decision boundry
+
+Regularized Logistic Regression:  
+![decisionboundry](Figure/decision1.jpg)
+- Figure: Training data with decision boundary (λ = 1)
+
+
 ## Course Links
 
 1) Machine Learning by Stanford University on [Coursera](https://www.coursera.org/learn/machine-learning)
