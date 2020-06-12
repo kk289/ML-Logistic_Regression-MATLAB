@@ -1,4 +1,4 @@
-# Machine Learning (MATLAB)
+# Machine Learning (MATLAB) - Logistic Regression
 
 Machine Learning course from Stanford University on Coursera.
 
