@@ -18,11 +18,17 @@ Machine Learning course from Stanford University on Coursera.
 - submit.m - Submission script that sends your solutions to our servers
 - mapFeature.m - Function to generate polynomial features
 - plotDecisionBoundary.m - Function to plot classifier’s decision boundary
+
 [⋆] plotData.m - Function to plot 2D classification data
+
 [⋆] sigmoid.m - Sigmoid Function
+
 [⋆] costFunction.m - Logistic Regression Cost Function
+
 [⋆] predict.m - Logistic Regression Prediction Function
+
 [⋆] costFunctionReg.m - Regularized Logistic Regression Cost
+
 
 ## Part 1: Logistic Regression
 
@@ -37,7 +43,7 @@ For this portion we will use following script
 ex2.m
 ```
 
-### ===================== Part 1.1: Visualizing the data =========================
+### Part 1.1: Visualizing the data
 ### plotData.m : Function to plot classifier’s decision boundary
 
 ```
@@ -51,7 +57,7 @@ plotData.m is used to generate a figure where the axes are the two exam scores, 
 - Figure: Scatterplot of training data
 
 
-### =================== Part 1.2: Implementation ===================
+### Part 1.2: Implementation 
 
 The Logistic Regression Hypothesis: 
 ![sigmoid](Figure/Sigmond.png)
@@ -121,7 +127,7 @@ For this portion we will use following script
 ex2_reg.m
 ```
 
-### ===================== Part 2.1: Visualizing the data =========================
+### Part 2.1: Visualizing the data
 ### plotData.m : Function to plot classifier’s decision boundary
 
 ```
@@ -136,7 +142,7 @@ plotData.m is used to generate a figure where the axes are the two exam scores, 
 
 Figure shows that our dataset cannot be separated into positive and negative examples by a straight-line through the plot. Therefore, a straight-forward application of logistic regression will not perform well on this dataset since logistic regression will only be able to find a linear decision boundary.
 
-### ===================== Part 2.2: Feature mapping ======================
+### Part 2.2: Feature mapping
 ### mapFeature.m - Function to generate polynomial features 
 One way to fit the data better is to create more features from each data point.
 In the provided function mapFeature.m, we will map the features into all polynomial terms of x1 and x2 up to the sixth power.
@@ -147,7 +153,7 @@ As a result of this mapping, our vector of two features (the scores on two QA te
 While the feature mapping allows us to build a more expressive classifier, it also more susceptible to overfitting.
 In the next parts, we will implement regularized logistic regression to fit the data and also see how regularization can help combat the overfitting problem.
 
-### =================== Part 2.3: Cost Function and gradient ====================
+### Part 2.3: Cost Function and gradient
 ### costFunctionReg.m - Regularized Logistic Regression Cost
 
 Implement the cost function and gradient for regularized logistic regression.
@@ -187,7 +193,7 @@ options = optimset('GradObj', 'on', 'MaxIter', 400);
 	fminunc(@(t)(costFunctionReg(t, X, y, lambda)), initial_theta, options);
 ```
 
-### =================== Part 2.4: Plotting the decision boundary ====================
+### Part 2.4: Plotting the decision boundary
 ### plotDecisionBoundary.m - Function to plot classifier’s decision boundary
 The function plotDecisionBoundary.m which plots the (non-linear) decision boundary that separates the positive and negative examples.
 
@@ -197,7 +203,7 @@ In plotDecisionBoundary.m, we plot the non-linear decision boundary by computing
 - Figure: Training data with decision boundary (λ = 1)
 
 
-### ============= Part 2.5: Optimizing different regularization parameters ===============
+### Part 2.5: Optimizing different regularization parameters
 In this part, we will get to try out different regularization parameters for the dataset to understand how regularization prevents over-fitting.
 
 Notice the changes in the decision boundary as you vary λ. With a small λ, we should find that the classifier gets almost every training example correct, but draws a very complicated boundary, thus overfitting the data.
