@@ -354,11 +354,11 @@ With a larger λ, we should see a plot that shows an simpler decision boundary w
 
 ## Result
 
-Logistic Regression:  
+### Logistic Regression:  
 ![decisionboundry](Figure/decision.jpg)
 - Figure: Training data with decision boundry
 
-Regularized Logistic Regression:  
+### Regularized Logistic Regression:  
 ![decisionboundry](Figure/decision1.jpg)
 - Figure: Training data with decision boundary (λ = 1)
 
